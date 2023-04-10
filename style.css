@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: math;
+}
+
+#sudoku-generator {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 100px auto;
+}
+
+#sudoku-generator label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+#sudoku-generator input,
+#sudoku-generator select,
+#sudoku-generator button {
+    width: 200px;
+}
+
+#sudoku-generator button {
+    cursor: pointer;
+    height: 30px;
+    background: cornflowerblue;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.game-board {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    margin: 100px auto;
+    gap: 20px;
+}
+
+#number-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#number-buttons .buttons-row {
+    display: flex;
+    gap: 10px;
+}
+
+#number-buttons button {
+    cursor: pointer;
+    width: 70px;
+    height: 70px;
+    font-size: 20px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+}
+
+#number-buttons .new-game-button {
+    width: 100%;
+    cursor: pointer;
+    background: cornflowerblue;
+    color: #fff;
+}
+
+#sudoku-container {
+    border: 2px solid #000;
+}
+
+#sudoku-container .row {
+    display: flex;
+}
+
+#sudoku-container .row.extra-border {
+    border-top: 1px solid #000;
+}
+
+#sudoku-container .cell {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000;
+}
+
+#sudoku-container.n-2 .cell {
+    width: 60px;
+    height: 60px;
+}
+
+#sudoku-container.n-4 .cell {
+    width: 30px;
+    height: 30px;
+}
+
+#sudoku-container .cell.extra-border {
+    border-left: 2px solid #000;
+}
+
+#sudoku-container .cell.active {
+    background: aquamarine;
+}
+
+#sudoku-container .cell.not-valid {
+    background: lightcoral;
+}
+
+#sudoku-container .cell.initial {
+    background: rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
